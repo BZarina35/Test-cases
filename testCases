@@ -1,0 +1,17 @@
+
+        1.	Scenario: Transfer money from one account to another
+
+Given I have logged into my account
+And I have anough balance in my account
+When I transfer a specified amount to another account
+Then the transfer should be successful
+And the amount should be deducted from my account balance
+And the amount should be added to the recipient's account balance
+
+        2.	Scenario: Transfer money to an invalid account number
+
+Given I have logged into my account
+And I have sufficient balance in my account
+When I transfer a specified amount to an invalid account number
+Then the transfer should fail
+And an error message should be displayed stating that the account number is invalid
